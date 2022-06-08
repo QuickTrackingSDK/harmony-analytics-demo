@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <!-- <meta name="aplus-heatmap-enabled" content="true" /> -->
+  <!-- <meta name="aplus-rate-ahot" content="0.1"/> -->
+  <!-- <meta name="aplus-vt-cfg-url" content="https://alidt.alicdn.com/alilog/vtdaily/web/0kowetdn0lepln4575kl3ruj/13852202105182.json"> -->
+  <title>React App</title>
+  
+  <script charset="UTF-8">
+
+    (function(w, d, s, q, i) {
+      w[q] = w[q] || [];
+      var f = d.getElementsByTagName(s)[0],j = d.createElement(s);
+      j.async = true;
+      j.id = 'beacon-aplus';
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203561150.js";
+      j.src = "./aplus_cloud_um.js";
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203825477.js";
+      // j.src = "https://d.alicdn.com/alilog/mlog/aplus/203825477.js";
+
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'aplus_queue', '204093703');
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-waiting', 'MAN']
+    // });
+
+    //假设 存在 三个页面
+    //http://localhost:5900?search=abc  //自动pv 被过滤
+    //http://localhost:5900#activity    //自动pv 被过滤
+    //http://localhost:5900#testpage1   //自动pv 不会过滤
+    //原理：依赖子字符串匹配
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-skip-apv-rules', ['sea', 'acti']]
+    // });
+    // console.log('yz-----aplus.getMetaInfo', aplus.getMetaInfo('aplus-autotrack-config'));
+    
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['DEBUG', true]
+    })
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['appKey', '8noknyd7kscbd711r8ap23ak__222'] //'0kowetdn0lepln4575kl3ruj' '8noknyd7kscbd711r8ap23ak' //'8wjpgv1nk8buiyn63mcrocpe'
+    });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-rhost-v', 'log-api.aplus.emas-poc.com'] //'pre1-log-api.aplus.emas-poc.com'
+    });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-rhost-u', 'log-api.aplus.emas-poc.com']
+    // });
+
+    // aplus_queue.push({
+    //   action: "aplus.setMetaInfo",
+    //   arguments: ['aplus-jsbridge-only', true]
+    // })
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-rhost-g', 'aplus2-web-api.emas-poc.com']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_anony_id', 'test_oid']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_dev_id', 'test_dev_id']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_user_id', 'test_user_id']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['_user_nick', 'test_user_nick']
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['globalproperty', {
+    //     b: null
+    //   }]
+    // });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-autotrack-enabled', true]
+    });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-disable-apv', true]
+    // });
+
+    aplus_queue.push({
+      action: 'aplus.setMetaInfo',
+      arguments: ['aplus-autotrack-config', {
+        collect_tags: {
+          li: true,
+          img: true,
+          svg: true,
+          div: true,
+          span: true,
+          p: true
+        },
+        collect_input: true,
+      }]
+    });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-heatmap-enabled', false]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-pagename', "test_pagename_meta"]
+    // });
+
+    
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-auto-exp',
+    //     [
+    //       {
+    //         cssSelector: '.quickui-app-option', // 你要曝光的元素class 
+    //         logkey: 'test_exp_item',  // （令箭 ID。以 / 开头的串）
+    //         props: ['data-name', 'data-goods-category-id', 'data-goods-category-name', 'data-goods-id', 'data-goods-name'], // 你要曝光的元素身上自定义属性
+    //       },
+    //     ],
+    //   ],
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-auto-clk', [{
+    //     cssSelector: '.auto_clk',
+    //     logkey: 'test_ck',
+    //     props: ['data-pagename', 'data-a', "data-b", "data-tracker-params"]
+    //   }, {
+    //     cssSelector: '.autotrack_clk_web',
+    //     logkey: 'autotrack_clk_web',
+    //     props: ['data-a', "data-b"]
+    //   }]]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-rate-ahot', 0.2]
+    // });
+
+    // aplus_queue.push({
+    //   action: 'aplus.setMetaInfo',
+    //   arguments: ['aplus-auto-exp', [{
+    //     cssSelector: '.auto_click_p',
+    //     logkey: 'auto_exp_p',
+    //     props: []
+    //   }, {
+    //     cssSelector: '.autotrack_exp_web',
+    //     logkey: 'autotrack_exp_web',
+    //     props: ['data-a', "data-b"]
+    //   }]]
+    // });
+  </script>
+  <!-- <script charset='UTF-8' src="./sensorsdata.min.js"></script>
+  <script>
+    var sensors = window['sensorsDataAnalytic201505'];
+    sensors.init({
+      server_url: 'http://a.cn/sa?token=xxxxx&project=xxxxxx',
+      is_track_single_page:true, // 单页面配置，默认开启，若页面中有锚点设计，需要将该配置删除，否则触发锚点会多触发 $pageview 事件
+      use_client_time:true, 
+      send_type:'beacon',
+      heatmap: {
+        //是否开启点击图，default 表示开启，自动采集 $WebClick 事件，可以设置 'not_collect' 表示关闭。
+        clickmap:'default',
+        collect_tags: {
+          div: {
+            max_level: 1,
+          },
+          li: true,
+          img: true,
+          svg: true,
+        },
+        collect_input: function(c) {
+          return true;
+        },
+        //是否开启触达图，not_collect 表示关闭，不会自动采集 $WebStay 事件，可以设置 'default' 表示开启。
+        scroll_notice_map:'default',
+        scroll_delay_time: 4000, 
+        scroll_event_duration: 1000 //单位秒，预置属性停留时长 event_duration 的最大值。默认5个小时，也就是300分钟，18000秒。
+      } 
+      });
+      sensors.quick('autoTrack');
+  </script> -->
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    var vConsole = new window.VConsole();
+  </script>
+  <script>
+    function testClk2() {
+      console.log('yz-----testClk2');
+      
+    }
+
+    function testClk() {
+      console.log('yz-----testclk');
+    }
+
+    function push(action, args) {
+      window.aplus_queue.push({
+        action,
+        arguments: args
+      });
+    };
+
+    function sendPV(args)  {
+      push('aplus.sendPV', [{is_auto:false}, {ts:111}]);
+    };
+
+    function sendEvent() {
+      push('aplus.record', ['test_clk', 'CLK', {a:1 ,b: 2}])
+    };
+  </script>
+</head>
+
+<body>
+  <div id="root" >
+    <div name="代码埋点">
+      <button onclick="sendEvent()">发送事件</button>
+      <button onclick="sendPV()">发送PV</button>
+    </div>
+    <div>
+      <a href="">IamATag</a>
+    </div>
+    <div>
+      <input type="text" id="input" name="input框" required placeholder="please input" minlength="4" maxlength="8" size="10" data-tracker-params="{/"key1/":/"value1/"}" data-abool=true/>
+    </div>
+    <div>
+      <button onclick="sendPV()">IamButtonTag</button>
+    </div>
+    <div>
+      <textarea id="story" name="story" rows="5" cols="33">IamTextareaTag</textarea>
+    </div>
+    <div class="contentFrame" data-pagename="自定义页面编码">测试时:</div>
+    <div>测试点击，我是一个div</div>
+    <span>我是一个span</span>
+    <div>
+      我是一个嵌套div
+      <div class="parent">
+        父级
+        <div class="son">
+          子级
+          <div class="grandson">
+            孙子级
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul>
+        <li data-anumber="1" data-astring="aStr" data-aboolean="true" data-afunction="function(){ console.log(1111);}" data-aobject="{a:1, b:2}" data-aarray="[1, 2, 3, 4]">我是一个li标签_1</li>
+        <li>我是一个li标签_2</li>
+        <li>我是一个li标签_3</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://ggzlimg.dpm.org.cn/app/gugong/2021/0918/PdbOo338JdhiCgkfg9QIIBY0zRIDzNYaZeZrVuR2.jpg" alt="" style="width: 100px; height:50px">
+    </div>
+    <img src="./mm1.jpeg" alt="美女" usemap="#MM" width="256" height="191">
+    <map id="MM" name="MM">
+        <area shape="rect" coords="20,20,80,80" href="#rect" alt="矩形" aplus-autotrack-off="true" style="background-color:#00FFEE;">
+        <area shape="circle" coords="200,50,50" href="#circle" alt="圆形" style="background: color #0f8;">
+        <area shape="poly" coords="150,100,200,120,180,130,190,180,150,150,100,160,140,120,100,110" href="#poly" alt="多边形" style="background: color #ff8;">
+    </map>
+    <style>
+      svg {
+        transform: rotate(-0.05deg);
+      }
+      circle {
+        transition: stroke-dasharray .2s;
+      }
+      .time-count-x {
+        line-height: 1.5;
+        position: relative;
+      }
+      .time-second {
+        position: absolute;
+        top: 50%; left: 0; right: 0;
+        margin-top: -.75em;
+        text-align: center;
+        font-size: 100px;
+      }
+    </style>
+    <div id="timeCountX" class="time-count-x">
+      <svg width="440" height="440" viewBox="0 0 440 440" class="center" aplus-autotrack-off="true">
+          <defs>
+              <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient1">
+                  <stop offset="0%" stop-color="#e52c5c"></stop>
+                  <stop offset="100%" stop-color="#ab5aea"></stop>
+              </linearGradient>
+             <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient2">
+                  <stop offset="0%" stop-color="#4352f3"></stop>
+                  <stop offset="100%" stop-color="#ab5aea"></stop>
+              </linearGradient>
+          </defs>
+          <g transform="matrix(0,-1,1,0,0,440)">
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#f0f1f5" fill="none" stroke-dasharray="1069 1069"></circle>
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient1')" fill="none" stroke-dasharray="1069 1069"></circle>
+              <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient2')" fill="none" stroke-dasharray="534.5 1069"></circle>
+          </g>
+      </svg>
+      <span id="timeSecond" class="time-second"></span>
+      <form id="testform" action="/action_page.php" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+</script>

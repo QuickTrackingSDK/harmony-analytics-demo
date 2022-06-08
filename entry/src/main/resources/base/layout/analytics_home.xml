@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:account_signin_defalut"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="账号登入[无来源]"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:layout_alignment="left"
+        ohos:top_margin="10vp"/>
+    <Button
+        ohos:id="$+id:account_signin"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="账号登入"
+        ohos:text_alignment="center"
+        ohos:right_of="$id:account_signin_defalut"
+        ohos:align_top="$id:account_signin_defalut"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:account_signout"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="账号登出"
+        ohos:text_alignment="center"
+        ohos:below="$id:account_signin_defalut"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:event"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="普通事件"
+        ohos:text_alignment="center"
+        ohos:below="$id:account_signout"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:event_with_page"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="普通事件[绑页面]"
+        ohos:text_alignment="center"
+        ohos:right_of="$id:event"
+        ohos:align_top="$id:event"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:kv_event"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="带参数事件"
+        ohos:text_alignment="center"
+        ohos:below="$id:event"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:kv_event_with_page"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="带参数事件[绑页面]"
+        ohos:text_alignment="center"
+        ohos:below="$id:kv_event"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:event_more_2000"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="自定义事件超过2000个"
+        ohos:text_alignment="center"
+        ohos:below="$id:kv_event_with_page"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:thread_event"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="子线程触发事件5次"
+        ohos:text_alignment="center"
+        ohos:below="$id:event_more_2000"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:set_gp"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="设置全局属性"
+        ohos:text_alignment="center"
+        ohos:below="$id:thread_event"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:clear_gp"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="清除全局属性"
+        ohos:text_alignment="center"
+        ohos:right_of="$id:set_gp"
+        ohos:align_top="$id:set_gp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:set_sp"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="设置超级属性"
+        ohos:text_alignment="center"
+        ohos:below="$id:set_gp"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:clear_sp"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="清除超级属性"
+        ohos:text_alignment="center"
+        ohos:right_of="$id:set_sp"
+        ohos:align_top="$id:set_sp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:set_pv_property"
+        ohos:height="match_content"
+        ohos:width="150vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="设置页面属性"
+        ohos:text_alignment="center"
+        ohos:below="$id:set_sp"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <TableLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="80vp"
+        ohos:width="match_parent"
+        ohos:left_margin="10vp"
+        ohos:right_margin="10vp"
+        ohos:top_margin="10vp"
+        ohos:below="$id:set_pv_property"
+        ohos:background_element="#87CEEB"
+        ohos:padding="8vp">
+
+        <Button
+            ohos:id="$+id:go2subprocessAbility"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:background_element="$graphic:button_bg"
+            ohos:padding="5vp"
+            ohos:left_margin="15vp"
+            ohos:right_margin="15vp"
+            ohos:text="子进程事件埋点"
+            ohos:text_alignment="center"
+            ohos:top_margin="4vp"
+            ohos:text_size="16fp"/>
+    </TableLayout>
+
+
+</DependentLayout>

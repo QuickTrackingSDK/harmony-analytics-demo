@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:one_event"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="触发自定义事件"
+        ohos:text_alignment="center"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:event_in_thread"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="开启两个后台线程触发事件各一个"
+        ohos:text_alignment="center"
+        ohos:below="$id:one_event"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+    <Button
+        ohos:id="$+id:kill_myself"
+        ohos:height="match_content"
+        ohos:width="315vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:left_margin="15vp"
+        ohos:text="杀死该进程"
+        ohos:text_alignment="center"
+        ohos:below="$id:event_in_thread"
+        ohos:top_margin="4vp"
+        ohos:text_size="16fp"/>
+
+</DirectionalLayout>

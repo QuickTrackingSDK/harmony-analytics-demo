@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Button
+        ohos:id="$+id:analytics_entry"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:text="统计分析"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:layout_alignment="center"
+        ohos:top_margin="50vp"/>
+
+    <Button
+        ohos:id="$+id:jump_test"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:text="测试Slice页"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:layout_alignment="center"
+        ohos:top_margin="50vp"/>
+
+    <Button
+        ohos:id="$+id:webview_entry"
+        ohos:height="match_content"
+        ohos:width="300vp"
+        ohos:background_element="$graphic:button_bg"
+        ohos:padding="5vp"
+        ohos:text="H5桥接测试"
+        ohos:text_alignment="center"
+        ohos:text_size="16fp"
+        ohos:layout_alignment="center"
+        ohos:top_margin="50vp"/>
+
+</DirectionalLayout>

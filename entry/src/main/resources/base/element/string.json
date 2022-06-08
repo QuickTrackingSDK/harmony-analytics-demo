@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "AnalyticsDemo"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Phone_Empty Feature Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "umeng_appkey",
+      "value": "64632267"
+    },
+    {
+      "name": "umeng_channel",
+      "value": "Umeng"
+    }
+  ]
+}

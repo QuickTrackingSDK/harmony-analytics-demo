@@ -1,0 +1,40 @@
+//apply plugin: 'com.huawei.agconnect'
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+
+//加载签名信息配置文件
+//def signingConfigPropsFile = project.file("signing-config.properties")
+//def signingConfigProps = new Properties()
+//signingConfigProps.load((new FileInputStream(signingConfigPropsFile)))
+
+ohos {
+    signingConfigs {
+        debug {
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    //implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    //implementation 'com.huawei.agconnect:agconnect-core-harmony:1.0.0.300'
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+    implementation files('libs/umeng-openid-1.0.0.jar')
+    implementation files('libs/qt-common-1.3.1.P.har')
+}
+decc {
+    supportType = ['html', 'xml']
+}
